@@ -1,0 +1,34 @@
+{
+  "0xbf9d5148d4abc8340a4d9dc1de0a41e3ba01bf2ca4c5985eae633a9a8a1e4f02": {
+    "contracts": {
+      "0xa72e15b4fc637528e678fdcab66f178b753f609a6d2a66564f1676fde4d51ed3": {
+        "name": "SimpleStorage",
+        "address": "0x266C6ee980cA9dfFFa7CdA1B53750dC0Ee387AF4"
+      }
+    }
+  },
+  "0xa0f5cfc34d199bcebeb814ddd1b09b2a1d43e96256571fec6bc071c639b603c1": {
+    "contracts": {
+      "0xa72e15b4fc637528e678fdcab66f178b753f609a6d2a66564f1676fde4d51ed3": {
+        "name": "SimpleStorage",
+        "address": "0x1678776804C07712dE66D56e4A2e5BbDa03bAcdf"
+      }
+    }
+  },
+  "0x989cc322b16257ec0c5a4e5be5d548e314415a54fc25b4792f4fedc7ce89055a": {
+    "contracts": {
+      "0xa72e15b4fc637528e678fdcab66f178b753f609a6d2a66564f1676fde4d51ed3": {
+        "name": "SimpleStorage",
+        "address": "0x1dF41BD9d366307E70Ab841620ABF1D55519fFEd"
+      },
+      "0x09abfb08eddf991ed4cfc8f4f14ee435f82770e171d507ede0ea48af557966f3": {
+        "name": "DecentralizedSocialNetwork",
+        "address": "0xe5B3D3608E4BBad52CCd50f881D44aA44F5B2137"
+      },
+      "0x6e45ed00119ee007aeef9a8fcd26f5919dcbd4b6404ea2bed7fdb5d3479f0cf1": {
+        "name": "DecentralizedSocialNetwork",
+        "address": "0xc308dFCcB10A66f27425ACCDA911868498Ef4dad"
+      }
+    }
+  }
+}
