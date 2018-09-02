@@ -126,5 +126,41 @@
         "address": "0x04D45b51fe4f00b4478F8b0719Fa779f14c8A194"
       }
     }
+  },
+  "0xc5b58c57926e190f1612c14fcb1ef054e5b1b2d965918ff685667c66ca3ff042": {
+    "contracts": {
+      "0xa72e15b4fc637528e678fdcab66f178b753f609a6d2a66564f1676fde4d51ed3": {
+        "name": "SimpleStorage",
+        "address": "0x68be4A89e8a563fa249B73A828b772143c50e4E7"
+      },
+      "0x6e45ed00119ee007aeef9a8fcd26f5919dcbd4b6404ea2bed7fdb5d3479f0cf1": {
+        "name": "DecentralizedSocialNetwork",
+        "address": "0xca08116dea59957395f4E80795450965654FD193"
+      }
+    }
+  },
+  "0xf96192250b1a0db85ab2b9e1d6b9453c2d1122d00127845c6c13d993a3795bc9": {
+    "contracts": {
+      "0xa72e15b4fc637528e678fdcab66f178b753f609a6d2a66564f1676fde4d51ed3": {
+        "name": "SimpleStorage",
+        "address": "0xd8Ba9885eB6DA6513B5D6BA62855a10D2B9608e9"
+      },
+      "0x6e45ed00119ee007aeef9a8fcd26f5919dcbd4b6404ea2bed7fdb5d3479f0cf1": {
+        "name": "DecentralizedSocialNetwork",
+        "address": "0xeA27229988b057802cfA2E4890B946826963EA42"
+      }
+    }
+  },
+  "0x73bacf6e13949e0e3ef879cbd8b3a6ae2ffac6f334e6545a9c82575b82ffe5fc": {
+    "contracts": {
+      "0xa72e15b4fc637528e678fdcab66f178b753f609a6d2a66564f1676fde4d51ed3": {
+        "name": "SimpleStorage",
+        "address": "0x68F9c7aFB752FB140e0037DA801F23A749Ea8e53"
+      },
+      "0x6e45ed00119ee007aeef9a8fcd26f5919dcbd4b6404ea2bed7fdb5d3479f0cf1": {
+        "name": "DecentralizedSocialNetwork",
+        "address": "0xb99250065b2Aefbafe93033E6dd0C40d65f2494E"
+      }
+    }
   }
 }

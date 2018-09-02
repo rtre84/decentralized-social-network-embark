@@ -12,18 +12,25 @@ class DSN extends React.Component {
 
         this.state = {
             // DSN related state
-            accountSet: "",
+            accountSet: "<metamask account - should be fetched dynamically>",
             userNameSet: "admin",
             passwordSet: "admin",
             yearsOldSet: 34,
             nameSet: "Anup",
             descriptionSet: "Test",
+            web3: null,
 
             // Storage related state
             valueSet: 10,
             valueGet: "",
             logs: []
         }
+
+        this.setWeb3 = this.setWeb3.bind(this);
+    }
+
+    setWeb3(web3) {
+        this.setState({web3});
     }
 
     handleChange(e){
@@ -66,7 +73,6 @@ class DSN extends React.Component {
     createAccount(e){
         e.preventDefault();
 
-        var value = parseInt(this.state.valueSet, 10);
         var yearsOld = parseInt(this.state.yearsOldSet, 34);
         var name = this.state.nameSet;
         var description = this.state.descriptionSet;

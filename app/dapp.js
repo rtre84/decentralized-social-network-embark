@@ -16,9 +16,16 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      web3: null,
       whisperEnabled: false,
       storageEnabled: false
     }
+
+    this.setWeb3 = this.setWeb3.bind(this);
+  }
+
+  setWeb3(web3) {
+    this.setState({web3});
   }
 
   componentDidMount(){ 
