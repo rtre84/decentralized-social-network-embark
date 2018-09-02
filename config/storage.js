@@ -6,13 +6,13 @@ module.exports = {
     available_providers: ["ipfs"],
     upload: {
       host: "localhost",
-      port: 5001
+      port: 6001
     },
     dappConnection: [
       {
         provider:"ipfs",
         host: "localhost",
-        port: 5001,
+        port: 6001,
         getUrl: "http://localhost:8080/ipfs/"
       }
     ]
@@ -28,7 +28,7 @@ module.exports = {
     provider: "ipfs",
     upload: {
       host: "localhost",
-      port: 5001,
+      port: 6001,
       getUrl: "http://localhost:8080/ipfs/"
     }
   }

@@ -11,8 +11,15 @@ class DSN extends React.Component {
         super(props);
 
         this.state = {
+            // DSN related state
+            accountSet: "",
             userNameSet: "admin",
             passwordSet: "admin",
+            yearsOldSet: 34,
+            nameSet: "Anup",
+            descriptionSet: "Test",
+
+            // Storage related state
             valueSet: 10,
             valueGet: "",
             logs: []
@@ -30,11 +37,14 @@ class DSN extends React.Component {
 
         // If web3.js 1.0 is being used
         if (EmbarkJS.isNewWeb3()) {
-            SimpleStorage.methods.set(value).send({from: web3.eth.defaultAccount});
-            this._addToLog("SimpleStorage.methods.set(value).send({from: web3.eth.defaultAccount})");
+            window.EmbarkJS = EmbarkJS;
+            window.DecentralizedSocialNetwork = DecentralizedSocialNetwork;
+            DecentralizedSocialNetwork.methods.set(value).send({from: web3.eth.defaultAccount});
+            this._addToLog("DecentralizedSocialNetwork.methods.createAccount()" +
+                ".send({from: web3.eth.defaultAccount})");
         } else {
-            SimpleStorage.set(value);
-            this._addToLog("#blockchain", "SimpleStorage.set(" + value + ")");
+            DecentralizedSocialNetwork.set(value);
+            this._addToLog("#blockchain", "DecentralizedSocialNetwork.set(" + value + ")");
         }
     }
 
@@ -46,9 +56,34 @@ class DSN extends React.Component {
                 .then(_value => this.setState({valueGet: _value}))
             this._addToLog("SimpleStorage.methods.get(console.log)");
         } else {
+            console.log(SimpleStorage.methods);
             SimpleStorage.get()
                 .then(_value => this.setState({valueGet: _value}));
             this._addToLog("SimpleStorage.get()");
+        }
+    }
+
+    createAccount(e){
+        e.preventDefault();
+
+        var value = parseInt(this.state.valueSet, 10);
+        var yearsOld = parseInt(this.state.yearsOldSet, 34);
+        var name = this.state.nameSet;
+        var description = this.state.descriptionSet;
+        var gethAccount = web3.eth.defaultAccount || this.state.accountSet;
+
+        console.log(web3.eth.defaultAccount || this.state.accountSet);
+
+        // If web3.js 1.0 is being used
+        if (EmbarkJS.isNewWeb3()) {
+            window.EmbarkJS = EmbarkJS;
+            window.DecentralizedSocialNetwork = DecentralizedSocialNetwork;
+            DecentralizedSocialNetwork.methods.createAccount(yearsOld, name, description).send({from: gethAccount});
+            this._addToLog("DecentralizedSocialNetwork.methods.createAccount(" + yearsOld + "," + name + "," + description + ")" +
+                ".send({from: " + gethAccount + "})");
+        } else {
+            DecentralizedSocialNetwork.methods.createAccount(yearsOld, name, description);
+            this._addToLog("DecentralizedSocialNetwork.methods.createAccount(" + yearsOld + "," + name + "," + description + ")");
         }
     }
 
@@ -59,14 +94,22 @@ class DSN extends React.Component {
 
     render(){
         return (<React.Fragment>
-                <h3> 1. Set the value in the blockchain</h3>
+                <h3> 1. Create an account</h3>
                 <Form inline>
                     <FormGroup>
                         <FormControl
                             type="text"
-                            defaultValue={this.state.valueSet}
+                            defaultValue={this.state.yearsOldSet}
                             onChange={(e) => this.handleChange(e)} />
-                        <Button bsStyle="primary" onClick={(e) => this.setValue(e)}>Set Value</Button>
+                        <FormControl
+                            type="text"
+                            defaultValue={this.state.nameSet}
+                            onChange={(e) => this.handleChange(e)} />
+                        <FormControl
+                            type="text"
+                            defaultValue={this.state.descriptionSet}
+                            onChange={(e) => this.handleChange(e)} />
+                        <Button bsStyle="primary" onClick={(e) => this.createAccount(e)}>Create Account</Button>
                         <HelpBlock>Once you set the value, the transaction will need to be mined and then the value will be updated on the blockchain.</HelpBlock>
                     </FormGroup>
                 </Form>
